@@ -1,45 +1,30 @@
-/*class Solution {
+class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int min=INT_MAX,result=0,op=0;
+       /* int pos,min=INT_MAX,max=INT_MIN,sum=0;
         for(int i=0;i<prices.size();i++){
             if(prices[i]<min){
                 min=prices[i];
-            }
-        
-        result=prices[i]-min;
-            if(op<result){
-                op=result;
+                pos=i;
             }
         }
-        return min;
-    }
-};
-
-*/
-
-class Solution { 
-public:
-    int maxProfit(vector<int>& prices) {
-        int sum;
-        int res=0;
-        for(int i=0;i<prices.size();i++)
-        {
-            for(int j=i+1;j<prices.size();j++)
-            {
-                if(prices[i]<prices[j])
-                {
-                    sum=prices[j]-prices[i];
-                }
-                else
-                {
-                    break;
-                }
-                res= max(sum,res);
-                
+        for(int i=pos;i<prices.size();i++){
+            if(prices[i]>max){
+                max=prices[i];
             }
         }
-        return res;
+        if(min==prices.size()-1)
+            return 0;
+        else
+            return sum=max-min;*/
         
+        
+        int mi=INT_MAX;
+        int profit=0;
+        for(int i=0;i<prices.size();i++){
+            mi=min(mi,prices[i]);
+            profit=max(profit,prices[i]-mi);
+        }
+        return profit;
     }
 };

@@ -7,13 +7,28 @@ class Solution{
   public:
     int findExtra(int a[], int b[], int n) {
         // add code here.
-        for(int i=0;i<n;i++){
+        //1st method
+        /*for(int i=0;i<n;i++){
             for(int j=i;j<n;j++){
                 if(a[i]==b[j]){
                     i++;
                 }
             }
             return i;
+        }*/
+        
+        //2nd method
+        int sum1=0,sum2=0;
+        for(int i=0;i<n;i++){
+            sum1+=a[i];
+        }
+        for(int i=0;i<n-1;i++){
+            sum2+=b[i];
+        }
+        int diff=sum1-sum2;
+        for(int i=0;i<n;i++){
+            if(a[i]==diff)
+               return i;
         }
     }
 };

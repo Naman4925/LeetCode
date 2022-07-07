@@ -54,11 +54,12 @@ class Solution{
         else{
             count=(count/2)+1;
         }
-        temp=head;
+        //temp=head;
         for(int i=0;i<count-1;i++){
-            temp=temp->next;
+            //temp=temp->next;
+            head=head->next;
         }
-        return temp->data;
+        return head->data;
     }
 };
 

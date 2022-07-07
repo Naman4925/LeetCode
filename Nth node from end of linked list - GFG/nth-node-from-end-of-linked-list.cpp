@@ -72,12 +72,12 @@ int getNthFromLast(Node *head, int n)
     if(count<n){
      return -1;   
     }
-   // Node *pp=head;
+    Node *pp=head;
     for(int i=0;i<count-n;i++){
-     //pp=pp->next; 
-     head=head->next;
+     pp=pp->next; 
+     //head=head->next;
     }
     
-    return head->data;
+    return pp->data;
 }
 

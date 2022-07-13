@@ -28,7 +28,7 @@ int main() {
 
 
 string isSubset(int a1[], int a2[], int n, int m) {
-    int count=0;
+   /* int count=0;
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             if(a1[i]==a2[j])
@@ -38,5 +38,20 @@ string isSubset(int a1[], int a2[], int n, int m) {
     if(count==m)
        return "Yes";
     else
-       return "No";
+       return "No";*/
+       
+    map<int,int>mp1;
+    map<int,int>mp2;
+    for(int i=0;i<n;i++){
+        mp1[a1[i]]++;
+    }
+    for(int i=0;i<m;i++){
+        mp2[a2[i]]++;
+    }
+    for(int i=0;i<m;i++){
+        if(mp1[a2[i]]<mp2[a2[i]]){
+            return "No";
+        }
+    }
+    return "Yes";
 }

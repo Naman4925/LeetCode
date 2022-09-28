@@ -10,6 +10,9 @@ public:
                     break;
                 }
             }
+            if(v.size()==2){
+                break;
+            }
         }
         return v;
     }

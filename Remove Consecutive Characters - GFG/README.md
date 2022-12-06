@@ -1,7 +1,6 @@
 # Remove Consecutive Characters
 ## Easy
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a string<strong> S </strong>delete the characters which are appearing more than once consecutively.</span></p>
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a string <strong>S</strong>. For each index i(1&lt;=i&lt;=N-1), erase it if s[i] is equal to s[i-1] in the string.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -39,5 +38,4 @@ appearing 2nd time consecutively.
 1&lt;=|S|&lt;=10<sup>5</sup><br>
 All characters are lowercase alphabets.</span><br>
 &nbsp;</p>
- <p></p>
-            </div>
+</div>
